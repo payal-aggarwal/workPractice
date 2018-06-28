@@ -1,5 +1,5 @@
-GitRepositoriesView.GitDirectories=C\:\\Payal\\Work\\git\\PageObjectModel\\.git;C\:\\Payal\\Work\\git\\Selenium-Automation\\.git;
-GitRepositoriesView.GitDirectories.relative=git\\PageObjectModel\\.git;git\\Selenium-Automation\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Payal\\Work\\.git;C\:\\Payal\\Work\\git\\PageObjectModel\\.git;C\:\\Payal\\Work\\git\\Selenium-Automation\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;git\\PageObjectModel\\.git;git\\Selenium-Automation\\.git;
 RepositorySearchDialogDeepSearch=true
 RepositorySearchDialogSearchPath=C\:\\Payal\\Work\\git\\NewEgg
 eclipse.preferences.version=1

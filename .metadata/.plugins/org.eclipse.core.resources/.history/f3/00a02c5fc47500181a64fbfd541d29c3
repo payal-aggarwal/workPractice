@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package practice;
+
+/**
+ * @author Payal
+ *
+ */
+public class Palindrome {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package Sample;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class NewTest {
+	public WebDriver driver;
+  @Test
+  public void launchBrowser() {
+	  driver = new FirefoxDriver();
+	  driver.get("http://www.google.com");
+	  Assert.assertEquals("Google", driver.getTitle());
+  }
+}

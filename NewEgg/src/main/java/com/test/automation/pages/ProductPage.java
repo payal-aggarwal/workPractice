@@ -7,12 +7,12 @@ import com.test.automation.base.TestBase;
 
 public class ProductPage  extends TestBase {
 	
-	@FindBy(xpath="//*[@id=\"landingpage-cart\"]/div/div[2]/button")
-	WebElement item;
+	@FindBy(xpath="///*[@id=\"landingpage-cart\"]/div/div[2]/button/span")
+	WebElement addtoCartBtn;
 	
 	public ViewShoppingCartPage AddToCart()
 	{
-		item.click();
+		addtoCartBtn.click();
 		return new ViewShoppingCartPage();
 	}
 

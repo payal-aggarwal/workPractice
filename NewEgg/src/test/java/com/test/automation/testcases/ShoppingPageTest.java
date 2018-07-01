@@ -1,5 +1,7 @@
 package com.test.automation.testcases;
 
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -38,6 +40,26 @@ public class ShoppingPageTest extends TestBase {
 		public void goShoppingCartTest()
 		{
 			 checkOut=shoppingPage.goShoppingCart();			 
-		}			
+		}	
+		
+				
+		@Test
+		public void  removeItemTest() {
+			float updatedCost=shoppingPage.removeItem();
+			float expectedTotalCost = shoppingPage.getTotalCost();
+			Assert.assertEquals(updatedCost, expectedTotalCost);
+		}
+		
+		@Test
+		public void editQuantityTest() {
+			float updatedcartTotal=shoppingPage.editQuantity();
+			float expectedTotalCost=shoppingPage.getTotalCost();
+			Assert.assertEquals(updatedcartTotal, expectedTotalCost);
+		}
 			
+		
+		@AfterMethod
+		public void closeBrowser(){
+			driver.quit();
+		}
 }

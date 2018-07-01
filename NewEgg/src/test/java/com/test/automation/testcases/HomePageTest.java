@@ -51,7 +51,9 @@ public class HomePageTest extends TestBase {
 	
 	@Test(priority = 3)
 	public void goToCartTest() {
-		
+		shoppingPage=homePage.goCart();
+	String	expectedURL = "https://secure.newegg.com/Shopping/ShoppingCart.aspx?Submit=view";
+		Assert.assertEquals(driver.getCurrentUrl(), expectedURL);
 	}
 	
 	@Test(priority = 4)

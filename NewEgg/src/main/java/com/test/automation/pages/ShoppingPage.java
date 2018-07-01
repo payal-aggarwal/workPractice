@@ -25,6 +25,9 @@ public class ShoppingPage extends TestBase {
 	@FindBy(xpath="//*[@id=\"bodyArea\"]/div[10]/form[1]/table[2]/tfoot/tr[1]/td/span[2]")
 	WebElement totalcost;
 	
+	@FindBy(xpath="//*[@id=\"bodyArea\"]/div[10]/form[1]/table[2]/tfoot/tr[1]/td/span[2]")
+	WebElement subTotal;
+	
 	
 	public ShoppingPage(){
 		PageFactory.initElements(driver, this);
@@ -32,16 +35,32 @@ public class ShoppingPage extends TestBase {
 	
 
 	
-	public void editQuantity()
+	public float editQuantity()
 	{
-		editQuantitytextbox.clear();
+		float initialCost=Float.parseFloat(subTotal.getText());
+		float cartTotal = Float.parseFloat(totalcost.getText());
+		int initialQty = Integer.parseInt(editQuantitytextbox.getText());
+		editQuantitytextbox.clear();		
 		editQuantitytextbox.sendKeys("4");
 		editQuantityBtn.click();
+		float newCost = (initialCost/initialQty) * 4;
+		float Total = newCost+cartTotal;
+		return Total;
 	}
 	
-	public void removeItem() {
+	public float removeItem() {
 		itemCheckbox.click();
+		float cartTotal = Float.parseFloat(totalcost.getText());
+		float itemCost = Float.parseFloat(subTotal.getText());
+		float Total = cartTotal-itemCost;
 		removeItem.click();
+		return Total;
+	}
+	
+	public float getTotalCost()
+	{
+		float cartTotal = Float.parseFloat(totalcost.getText());
+		return cartTotal;
 	}
 	
 	public CheckOut goShoppingCart()

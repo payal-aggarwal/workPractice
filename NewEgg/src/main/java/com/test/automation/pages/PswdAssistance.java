@@ -31,9 +31,5 @@ public class PswdAssistance extends TestBase {
 		
 	}
 	
-	public String validatePageUrl(){
-		return driver.getCurrentUrl();
-	}
-	
 	
 }

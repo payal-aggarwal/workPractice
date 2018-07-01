@@ -26,12 +26,12 @@ public class ResetPasswordTest extends TestBase {
 		pswdAssistance = resetPassword.forgotPassword(prop.getProperty("username"));
 	}
 	
-	@Test
+	/*@Test
 	public void verifyTitle()
 	{
 		
 	}
-	
+	*/
 	@AfterMethod
 	public void closeBrowser(){
 		driver.quit();

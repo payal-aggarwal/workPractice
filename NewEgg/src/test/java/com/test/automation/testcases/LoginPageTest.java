@@ -19,7 +19,7 @@ public LoginPageTest() {
 	super();
 }
 
-@BeforeMethod()
+@BeforeMethod
 public void setup() {
 	start();
 	loginPage = new LoginPage();

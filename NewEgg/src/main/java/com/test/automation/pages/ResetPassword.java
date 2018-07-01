@@ -17,7 +17,7 @@ public class ResetPassword extends TestBase {
 	WebElement username;
 	
 	@FindBy(partialLinkText="Forgot your")
-	WebElement forgotpassword;
+	WebElement forgotpswd;
 	
 	//@FindBy(xpath = "//a[contains(text(), 'Forgot your password')]")
 	//WebElement forgotpswd;
@@ -28,7 +28,7 @@ public class ResetPassword extends TestBase {
 		
 		public PswdAssistance forgotPassword(String un) {
 			username.sendKeys(un);
-			forgotpassword.click();
+			forgotpswd.click();
 			
 			return new PswdAssistance();
 		

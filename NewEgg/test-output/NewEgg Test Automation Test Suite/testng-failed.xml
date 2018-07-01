@@ -10,6 +10,14 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- com.test.automation.testcases.LoginPageTest -->
+      <class name="com.test.automation.testcases.PswdAssistanceTest">
+        <methods>
+          <include name="setup"/>
+          <include name="pswdAssistanceTest"/>
+          <include name="validatePageUrlTest"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.test.automation.testcases.PswdAssistanceTest -->
     </classes>
   </test> <!-- NewEgg Test Cases(failed) -->
 </suite> <!-- Failed suite [NewEgg Test Automation Test Suite] -->

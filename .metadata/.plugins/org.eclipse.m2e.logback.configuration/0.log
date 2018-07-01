@@ -3055,3 +3055,4 @@
 2018-06-30 21:24:36,042 [Worker-451] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2018-06-30 21:24:36,052 [Worker-451] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-06-30 21:24:36,052 [Worker-451] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Payal\Work\NewEgg\src\test\resources
+2018-06-30 21:40:29,245 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

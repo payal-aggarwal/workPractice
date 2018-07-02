@@ -30,7 +30,7 @@ public class ProductPageTest extends TestBase {
 		
 		homePage=loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
 		productList = homePage.searchItem(TestBase.GetSearchData());
-		productPage =productList.mouseOverOnProduct(1);
+		productPage =productList.mouseOverOnProduct(TestBase.GetSearchData());
 	}
 	
 	@Test

@@ -36,7 +36,7 @@ public class ProductListTest extends TestBase{
 	
 	@Test
 	public void mouseOverOnProductTest() {
-		productPage = productList.mouseOverOnProduct(1); //passing first search result index	
+		productPage = productList.mouseOverOnProduct(TestBase.GetSearchItem()); //passing first search result index	
 		
 	}
 

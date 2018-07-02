@@ -77,6 +77,12 @@ public static Properties prop;
 		Object[][] data = TestUtil.getTestData("SearchWorkBook");
 		return data[1][0].toString();
 	}
+	
+	public static String GetSearchItem()
+	{
+		Object[][] data = TestUtil.getTestData("SearchWorkBook");
+		return data[1][1].toString();
+	}
 		
 	}
 	

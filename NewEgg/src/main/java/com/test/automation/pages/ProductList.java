@@ -18,19 +18,33 @@ public class ProductList extends TestBase{
 	@FindBy(xpath="//div[@class='item-container'][1]")
 	WebElement item;
 	
-	@FindBy(xpath="//*[@id=\"bodyArea\"]/section/div/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[2]/div[1]/a/img")
+	@FindBy(xpath="//*[@id=\"bodyArea\"]/section/div/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[2]/div[1]/div/a")
 	WebElement firstItem;
 	
-	public ProductPage mouseOverOnProduct(int number){
-		String fPart = "//*[@id=\\\"bodyArea\\\"]/section/div/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[2]/div[";
-		String sPart = "]/a/img";
-		Actions action = new Actions(driver);
-		WebElement item = driver.findElement(By.xpath(fPart+number+sPart));
-		action.moveToElement(item).build().perform();
-		item.click();	
-		return new ProductPage();		
-	}
+	
+	public ProductPage mouseOverOnProduct(String itemName){
+		String fPart = "//*[@id=\"bodyArea\"]/section/div/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[2]/div[";
+
+		String sPart = "]/div/a";
+		List <WebElement> items = driver.findElements(By.xpath("//*[@id=\\\"bodyArea\\\"]/section/div/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[2]/div"));
+		int itemCount=items.size();
+		for (int i=1;i<=itemCount;i++) {
+			String actualXpath=fPart+ i+ sPart;
+			WebElement element = driver.findElement(By.xpath(actualXpath));
+			if (element.getText().equals(itemName)) {
+				Actions action = new Actions(driver);
+				action.moveToElement(element).build().perform();
+				element.click();
+				break;
+			}
+		}
+				return new ProductPage();	
+			}
+		}
+		
+			
+	
 	
 	
 
-}
+
